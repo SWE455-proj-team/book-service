@@ -1,0 +1,12 @@
+name: Deploy book-service
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    uses: ./.github/workflows/service-deploy.yml
+    with:
+      service_name: book-service
+      service_dir: .
